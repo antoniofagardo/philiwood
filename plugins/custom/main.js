@@ -4,7 +4,7 @@ $('.contact1-form').on('submit', function (e) {
     e.preventDefault();
     console.log("Sending ajax request");
     $.ajax({
-        url: "{{ site.Params.contact.formAction }}",
+        url: $('.contact1-form')[0].getAttribute("action"),
         method: "POST",
         dataType: "json",
         data: $(".contact1-form").serialize(),
